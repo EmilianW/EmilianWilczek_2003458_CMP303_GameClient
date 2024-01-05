@@ -33,7 +33,7 @@ public class ClientHandle : MonoBehaviour
         var _id = _packet.ReadInt();
         var _position = _packet.ReadVector3();
 
-        GameManager.Players[_id].transform.position = _position;
+        GameManager.Players[_id].SetPosition(_position);
     }
 
     public static void PlayerRotation(Packet _packet)
